@@ -3,7 +3,7 @@
 # define HUMAN_A
 
 #include <iostream>
-//#include "Weapon.hpp"
+#include "Weapon.hpp"
 
 class HumanA
 {
@@ -13,7 +13,7 @@ class HumanA
 
 	public:
 		void attack ( void );
-		HumanA();
+		//HumanA();
 		HumanA(std::string name, Weapon &weapon);
 };
 
