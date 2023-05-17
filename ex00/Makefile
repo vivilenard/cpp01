@@ -1,21 +1,32 @@
-$(NAME) = Zombie
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vlenard <vlenard@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/17 09:58:16 by vlenard           #+#    #+#              #
+#    Updated: 2023/05/17 10:12:56 by vlenard          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRC = main.cpp
+NAME = Zombie
 
-OBJ = $(SRC.cpp=.o)
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
-FLAGS = -Wall -Werror -Wextra #c98
+SRC = main.cpp newZombie.cpp Zombie.cpp randomChump.cpp
+
+OBJ = $(SRC:.cpp=.o)
+
+$(NAME): $(OBJ)
+	c++ $(OBJ) $(FLAGS) -o $(NAME)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) $(FLAGS) -o $(NAME)
-
 clean: 
-	rm $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm ./$(NAME)
+	rm -f ./$(NAME)
 
-re: fclean
-	all
+re: fclean all

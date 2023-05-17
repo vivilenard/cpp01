@@ -6,13 +6,20 @@
 /*   By: vlenard <vlenard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 23:10:24 by vlenard           #+#    #+#             */
-/*   Updated: 2023/05/16 23:20:57 by vlenard          ###   ########.fr       */
+/*   Updated: 2023/05/17 10:13:34 by vlenard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie (std::string name)
+Zombie::Zombie (std::string name):_name(name){ }
+
+Zombie::~Zombie()
 {
-    _name = name;
+    std::cout << _name << " died." << std::endl;
+}
+
+void Zombie::announce()
+{
+    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
