@@ -6,11 +6,11 @@
 #    By: vlenard <vlenard@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/17 09:58:16 by vlenard           #+#    #+#              #
-#    Updated: 2023/05/17 21:33:45 by vlenard          ###   ########.fr        #
+#    Updated: 2023/05/19 11:46:54 by vlenard          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Human
+NAME = Sed
 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
