@@ -2,10 +2,10 @@
 
 Harl::Harl()
 {
-	levels[0] = "debug";
-	levels[1] = "info";
-	levels[2] = "warning";
-	levels[3] = "error";
+	levels[0] = "DEBUG";
+	levels[1] = "INFO";
+	levels[2] = "WARNING";
+	levels[3] = "ERROR";
 	
 	this->messages[0] = &Harl::debug;
 	this->messages[1] = &Harl::info;
@@ -52,8 +52,7 @@ void	Harl::complain( std::string level )
 		case 2: (this->*messages[i])(); i++;
 		case 3: (this->*messages[i])(); break ;
 		default: 
-			std::cout << "[?]" << std::endl;
-			std::cout << "I don't know what to say ..." << std::endl;
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
 
