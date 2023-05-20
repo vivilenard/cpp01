@@ -18,7 +18,6 @@ class Harl
 		Harl();
 		~Harl(){};
 		void	complain( std::string level );
-		void	print_messages(int n);
 };
 
 # endif

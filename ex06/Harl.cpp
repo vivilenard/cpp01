@@ -37,32 +37,23 @@ void	Harl::error( void )
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void	Harl::print_messages(int n)
-{
-	for (int i = n; i < 4; i++)
-		(this->*messages[i])();
-}
-
 void	Harl::complain( std::string level )
 {
-	//enum e_levels {debug, info, warning, error};
 	int	i;
-
 	for (i = 0; i < 4; i++)
 	{
 		if (level == levels[i])
 			break;
 	}
-	std::cout << i << std::endl;
 	switch(i)
 	{
-		case 0: print_messages(0);
-		case 1: print_messages(1);
-		case 2: print_messages(2);
-		case 3: print_messages(3);
+		case 0: (this->*messages[i])(); i++;
+		case 1: (this->*messages[i])(); i++;
+		case 2: (this->*messages[i])(); i++;
+		case 3: (this->*messages[i])(); break ;
 		default: 
-				std::cout << "[?]" << std::endl;
-				std::cout << "I don't know what to say ..." << std::endl;
+			std::cout << "[?]" << std::endl;
+			std::cout << "I don't know what to say ..." << std::endl;
 	}
 }
 
