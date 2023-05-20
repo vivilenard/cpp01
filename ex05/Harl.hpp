@@ -12,7 +12,6 @@ class Harl
 		void	info( void );
 		void	warning( void );
 		void	error( void );
-	//	void	(Harl::*messages[4])();
 	public:
 		Harl(){};
 		~Harl(){};
