@@ -6,7 +6,7 @@
 /*   By: vlenard <vlenard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:15:35 by vlenard           #+#    #+#             */
-/*   Updated: 2023/05/19 14:44:31 by vlenard          ###   ########.fr       */
+/*   Updated: 2023/05/20 14:27:15 by vlenard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,16 @@ int	main ()
 {
 	Harl	harl;
 	
-	harl.complain("1");
-	// harl.complain("info");
-	// harl.complain("debug");
-	// harl.complain("error");
-	// harl.complain("lol");
+	harl.complain("debug");
+	std::cout << std::endl;
+	harl.complain("info");
+	std::cout << std::endl;
+	harl.complain("warning");
+	std::cout << std::endl;
+	harl.complain("error");
+	std::cout << std::endl;
+	harl.complain("lol");
+	std::cout << std::endl;
+	harl.complain("bye");
 	return 0;
 }
