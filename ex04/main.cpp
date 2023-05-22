@@ -6,7 +6,7 @@
 /*   By: vlenard <vlenard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 11:47:48 by vlenard           #+#    #+#             */
-/*   Updated: 2023/05/19 14:07:56 by vlenard          ###   ########.fr       */
+/*   Updated: 2023/05/22 12:00:38 by vlenard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	main()
 	{
 		if (inStream.is_open() == false)
 			std::cout << "unable to read from infile \n";
-		if (!outStream.is_open() == false)
+		else if (!outStream.is_open() == false)
 			std::cout << "unable to open outfile \n";
 	}
 	inStream.close();

@@ -6,7 +6,7 @@
 #    By: vlenard <vlenard@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/17 09:58:16 by vlenard           #+#    #+#              #
-#    Updated: 2023/05/19 11:46:54 by vlenard          ###   ########.fr        #
+#    Updated: 2023/05/22 12:01:28 by vlenard          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,6 @@ clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f ./$(NAME)
+	rm -f ./$(NAME) *.replace
 
 re: fclean all
